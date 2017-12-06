@@ -47,10 +47,6 @@
                     "type": "file",
                     "path": "chatty.sh",
                     "dest-filename": "chatty.sh"
-                },
-                {
-                    "type": "archive",
-                    "path": "jre-8u151-linux-x64.tar.gz"
                 }
             ]
         }

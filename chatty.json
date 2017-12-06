@@ -1,0 +1,46 @@
+{
+    "app-id": "org.chatty.chatty",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "chatty",
+    "rename-desktop-file": "chatty.desktop",
+    "finish-args": [
+        "--socket=x11", "--share=ipc", "--socket=wayland",
+        "--device=dri",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--persist=.chatty"
+    ],
+
+    "modules": [
+        {
+            "name": "chatty",
+            "no-autogen": true,
+            "sources": [
+                {
+                    "type": "archive",
+                    "path": "Chatty_0.9b3.zip"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty-Makefile",
+                    "dest-filename": "Makefile"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty.sh",
+                    "dest-filename": "chatty.sh"
+                },
+                {
+                    "type": "archive",
+                    "path": "jre-8u151-linux-x64.tar.gz"
+                }
+            ]
+        }
+    ]
+}

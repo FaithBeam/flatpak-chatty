@@ -1,0 +1,12 @@
+all:
+				true
+install:
+				mkdir -p /app/bin/
+				install chatty.sh /app/bin/chatty
+				mkdir -p /app/share/chatty
+				cp -r * /app/share/chatty
+				mkdir -p /app/share/applications/
+				install chatty.desktop /app/share/applications/chatty.desktop
+
+make:
+				true

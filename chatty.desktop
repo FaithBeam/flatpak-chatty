@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Chatty
+Icon=/app/share/chatty/chatty.png
+Exec=/app/share/chatty/bin/java -jar /app/share/chatty/Chatty.jar
+Terminal=false
+Categories=Network;

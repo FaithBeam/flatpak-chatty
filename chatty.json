@@ -36,8 +36,10 @@
             "no-autogen": true,
             "sources": [
                 {
-                    "type": "archive",
-                    "path": "Chatty_0.9b3.zip"
+                    "type": "file",
+                    "url": "https://github.com/chatty/chatty/releases/download/v0.9b3/Chatty_0.9b3.zip",
+                    "sha256": "5757f25c97365245f9646df418b70eb8af30c03ecb9232b8034e94a60544e1d4",
+                    "dest-filename": "Chatty.zip"
                 },
                 {
                     "type": "file",

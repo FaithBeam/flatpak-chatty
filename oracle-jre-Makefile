@@ -1,0 +1,7 @@
+all:
+				true
+install:
+				mkdir -p /app/share/java
+				tar xzvf jre.tar.gz --strip 1 -C /app/share/java
+make:
+				true

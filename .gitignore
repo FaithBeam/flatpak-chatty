@@ -1,0 +1,5 @@
+.git/
+chatty/
+repo/
+.flatpak-builder/
+*.flatpak

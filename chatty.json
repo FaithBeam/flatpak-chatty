@@ -1,0 +1,66 @@
+{
+    "app-id": "org.chatty.chatty",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "1.6",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "chatty",
+    "rename-icon": "chatty",
+    "rename-desktop-file": "chatty.desktop",
+    "finish-args": [
+        "--socket=x11", "--share=ipc", "--socket=wayland",
+        "--device=dri",
+        "--socket=pulseaudio",
+        "--share=network",
+        "--persist=.chatty"
+    ],
+
+    "modules": [
+        {
+            "name": "oracle-jre",
+            "no-autogen": true,
+            "sources" : [
+                {
+                    "type": "file",
+                    "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227542_e758a0de34e24606bca991d704f6dcbf",
+                    "sha256": "3c697fe1b8ef4d93ffb2c944c3b38b64697f5427c183f659e527a6fecccd789f",
+                    "dest-filename": "jre.tar.gz"
+                },
+                {
+                    "type": "file",
+                    "path": "oracle-jre-Makefile",
+                    "dest-filename": "Makefile"
+                }
+            ]
+        },
+        {
+            "name": "chatty",
+            "no-autogen": true,
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://github.com/chatty/chatty/releases/download/v0.9b3/Chatty_0.9b3.zip",
+                    "sha256": "5757f25c97365245f9646df418b70eb8af30c03ecb9232b8034e94a60544e1d4",
+                    "dest-filename": "Chatty.zip"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty.desktop"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty.png"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty-Makefile",
+                    "dest-filename": "Makefile"
+                },
+                {
+                    "type": "file",
+                    "path": "chatty.sh",
+                    "dest-filename": "chatty.sh"
+                }
+            ]
+        }
+    ]
+}

@@ -38,8 +38,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/chatty/chatty/releases/download/v0.9b3/Chatty_0.9b3.zip",
-                    "sha256": "5757f25c97365245f9646df418b70eb8af30c03ecb9232b8034e94a60544e1d4",
+                    "url": "https://github.com/chatty/chatty/releases/download/v0.9/Chatty_0.9.zip",
+                    "sha256": "aa99fd3535c45a4dd3666f872eb7a72744ca57588fd5b78f208e6114308e5079",
                     "dest-filename": "Chatty.zip"
                 },
                 {

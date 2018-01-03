@@ -13,7 +13,7 @@
         "--share=network",
         "--persist=.chatty"
     ],
-
+    "cleanup": [ "*.la", "*.a", "/lib/debug", "/lib/pkgconfig", "/run", "/share/man" ],
     "modules": [
         {
             "name": "pysocks",
@@ -197,6 +197,7 @@
                 "python3 waf-light --make-waf",
                 "install waf /app/bin"
             ],
+            "cleanup": [ "/*" ],
         	"sources": [
         		{
         			"type": "archive",
@@ -224,6 +225,9 @@
         },
         {
         	"name": "libass",
+            "make-args": [
+                "-j4"
+            ],
         	"sources": [
         		{
         			"type": "archive",
@@ -235,12 +239,15 @@
         {
         	"name": "ffmpeg",
         	"no-autogen": true,
-        	"buildsystem": "simple",
-        	"build-commands": [
-        		"./configure --prefix=/app",
-        		"make -j6",
-        		"make install"
-        	],
+            "config-opts": [
+                "--disable-programs",
+                "--disable-doc",
+                "--prefix=/app"
+            ],
+            "make-args": [
+                "-j4"
+            ],
+            "cleanup": [ "/share/ffmpeg" ],
         	"sources": [
         		{
         			"type": "git",
@@ -251,6 +258,9 @@
         {
             "name": "zlib",
             "no-autogen": true,
+            "make-args": [
+                "-j4"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -263,11 +273,12 @@
             "no-autogen": true,
             "buildsystem": "simple",
             "build-commands": [
-                "waf configure -j6",
-                "waf",
+                "waf configure --disable-manpage-build",
+                "waf -j4",
                 "waf install --destdir=/app -f",
                 "install /app/run/build/mpv/usr/local/bin/mpv /app/bin/mpv"
             ],
+            "cleanup": [ "/usr", "/etc"],
             "sources": [
                 {
                     "type": "git",

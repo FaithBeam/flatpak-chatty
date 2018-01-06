@@ -1,5 +1,5 @@
 # flatpak-chatty
-
+Chatty twitch client, streamlink, and mpv in a flatpak
 
 ### Dependencies
 ~~~~
@@ -39,6 +39,8 @@ flatpak uninstall --user org.chatty.chatty
 
 ### Programs Included (Not including small dependencies)
 [Chatty](http://chatty.github.io/)
+
+[Oracle JRE](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 [Streamlink](https://streamlink.github.io/)
 

@@ -39,6 +39,7 @@ flatpak run org.chatty.chatty
 * Click save
 
 It should look like this
+
 ![Configuration Example](https://i.imgur.com/Kmfu9GK.png)
 
 ### Uninstalling

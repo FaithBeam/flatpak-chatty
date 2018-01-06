@@ -30,6 +30,17 @@ flatpak install --user --bundle the-file-you-just-downloaded.flatpak
 flatpak run org.chatty.chatty
 ~~~~
 
+### Required Configuration
+* Click Extra
+* Click Livestreamer
+* Click Enable context menu entry
+* Click Edit under Base command
+* Replace livestreamer with streamlink -p mpv
+* Click save
+
+It should look like this
+![Configuration Example](https://i.imgur.com/Kmfu9GK.png)
+
 ### Uninstalling
 ~~~~
 make uninstall

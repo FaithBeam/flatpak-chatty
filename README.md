@@ -8,7 +8,7 @@ flatpak-builder (When building yourself)
 ~~~~
 
 ### Building & installing it yourself
-~7 minutes to download and install on a 4 core 3.7Ghz CPU
+~7 minutes to download and build on a 4 core 3.7Ghz CPU
 ~~~~
 git clone https://github.com/FaithBeam/flatpak-chatty.git
 cd flatpak-chatty/

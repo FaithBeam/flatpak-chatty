@@ -35,3 +35,12 @@ make uninstall
 OR
 flatpak uninstall --user org.chatty.chatty
 ~~~~
+
+### Programs Included (Not including small dependencies)
+![Chatty](http://chatty.github.io/)
+
+![Streamlink](https://streamlink.github.io/)
+
+![MPV](https://mpv.io/)
+
+![ffmpeg](https://ffmpeg.org/)

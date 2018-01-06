@@ -13,8 +13,279 @@
         "--share=network",
         "--persist=.chatty"
     ],
-
+    "cleanup": [ "*.la", "*.a", "/lib/debug", "/lib/pkgconfig", "/run", "/share/man" ],
     "modules": [
+        {
+            "name": "pysocks",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/Anorov/PySocks/archive/1.6.8.tar.gz",
+                    "sha256": "a7f32ce1ac2b3467b793fdf14b23ad2b3ae139bcb10b6331fdecdae97ac6b821"
+                }
+            ]
+        },
+        {
+            "name": "six",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/benjaminp/six/archive/1.11.0.tar.gz",
+                    "sha256": "927dc6fcfccd4e32e1ce161a20bf8cda39d8c9d5f7a845774486907178f69bd4"
+                }
+            ]
+        },
+        {
+            "name": "websocket-client",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/websocket-client/websocket-client/archive/v0.46.0.tar.gz",
+                    "sha256": "0fc5d25d5b6ce61fe359ebfb69bf2e16056f0aabc314b0fd6aecaa6fec689c28"
+                }
+            ]
+        },
+        {
+            "name": "iso3166",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/deactivated/python-iso3166.git"
+                }
+            ]
+        },
+        {
+            "name": "pycryptodome",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/Legrandin/pycryptodome.git"
+                }
+            ]
+        },
+        {
+            "name": "certifi",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/certifi/python-certifi.git"
+                }
+            ]
+        },
+        {
+            "name": "urllib3",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/shazow/urllib3/archive/1.22.tar.gz",
+                    "sha256": "dd60d4104b871943e06be69e296e97ede9d42edf6ba534f0268aee932a601e2a"
+                }
+            ]
+        },
+        {
+            "name": "idna",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/kjd/idna.git"
+                }
+            ]
+        },
+        {
+            "name": "chardet",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/chardet/chardet/archive/3.0.4.tar.gz",
+                    "sha256": "d5620025cfca430f6c2e28ddbc87c3c66a5c82fa65570ae975c92911c2190189"
+                }
+            ]
+        },
+        {
+            "name": "requests",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/requests/requests.git"
+                }
+            ]
+        },
+        {
+            "name": "iso639",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/noumar/iso639.git"
+                }
+            ]
+        },
+        {
+            "name": "streamlink",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "python3 setup.py install --prefix /app"
+            ],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/streamlink/streamlink/releases/download/0.9.0/streamlink-0.9.0.tar.gz",
+                    "sha256": "8c01c23a3e02d75a09232ac471a7c277a699455293a99e8a2ec0846a1b4a6819"
+                }
+            ]
+        },
+        {
+        	"name": "waf",
+        	"no-autogen": true,
+        	"buildsystem": "simple",
+            "build-commands": [
+                "python3 waf-light --make-waf",
+                "install waf /app/bin"
+            ],
+            "cleanup": [ "/*" ],
+        	"sources": [
+        		{
+        			"type": "archive",
+        			"url": "https://github.com/waf-project/waf/archive/waf-2.0.4.tar.gz",
+        			"sha256": "03c565d5246fc36ae8fa85d0398f9fe0042c8bf286760a687deafcbebde3f454"
+        		}
+        	]
+        },
+        {
+            "name": "fribidi",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "./bootstrap",
+                "./configure --prefix /app",
+                "make",
+                "make install"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/fribidi/fribidi.git"
+                }
+            ]
+        },
+        {
+        	"name": "libass",
+            "make-args": [
+                "-j4"
+            ],
+        	"sources": [
+        		{
+        			"type": "archive",
+        			"url": "https://github.com/libass/libass/releases/download/0.14.0/libass-0.14.0.tar.gz",
+        			"sha256": "8d5a5c920b90b70a108007ffcd2289ac652c0e03fc88e6eecefa37df0f2e7fdf"
+        		}
+        	]
+        },
+        {
+        	"name": "ffmpeg",
+        	"no-autogen": true,
+            "config-opts": [
+                "--disable-programs",
+                "--disable-doc",
+                "--prefix=/app"
+            ],
+            "make-args": [
+                "-j4"
+            ],
+            "cleanup": [ "/share/ffmpeg" ],
+        	"sources": [
+        		{
+        			"type": "git",
+        			"url": "https://github.com/FFmpeg/FFmpeg.git"
+        		}
+        	]
+        },
+        {
+            "name": "zlib",
+            "no-autogen": true,
+            "make-args": [
+                "-j4"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/madler/zlib.git"
+                }
+            ]
+        },
+        {
+            "name": "mpv",
+            "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "waf configure --disable-manpage-build",
+                "waf -j4",
+                "waf install --destdir=/app -f",
+                "install /app/run/build/mpv/usr/local/bin/mpv /app/bin/mpv"
+            ],
+            "cleanup": [ "/usr", "/etc"],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/mpv-player/mpv.git"
+                }
+            ]
+        },
         {
             "name": "oracle-jre",
             "no-autogen": true,

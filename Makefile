@@ -1,5 +1,3 @@
-all:
-	true
 pre-build:
 	flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 	flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
@@ -15,5 +13,3 @@ clean:
 	rm -rf repo/
 	rm -rf .flatpak-builder/
 	rm *.flatpak
-make:
-	true

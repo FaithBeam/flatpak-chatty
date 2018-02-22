@@ -289,17 +289,17 @@
         {
             "name": "oracle-jre",
             "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/share/java",
+                "tar xzvf jre.tar.gz --strip 1 -C /app/share/java"
+            ],
             "sources" : [
                 {
                     "type": "file",
                     "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=230532_2f38c3b165be4555a1fa6e98c45e0808",
                     "sha256": "f5013ffab71cfb690de18d2b75a2d8c95e87175c888c50042be06b167ea6b4b5",
                     "dest-filename": "jre.tar.gz"
-                },
-                {
-                    "type": "file",
-                    "path": "oracle-jre-Makefile",
-                    "dest-filename": "Makefile"
                 }
             ]
         },

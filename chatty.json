@@ -7,13 +7,22 @@
     "rename-icon": "chatty",
     "rename-desktop-file": "chatty.desktop",
     "finish-args": [
-        "--socket=x11", "--share=ipc", "--socket=wayland",
+        "--socket=x11",
+        "--share=ipc",
+        "--socket=wayland",
         "--device=dri",
         "--socket=pulseaudio",
         "--share=network",
         "--persist=.chatty"
     ],
-    "cleanup": [ "*.la", "*.a", "/lib/debug", "/lib/pkgconfig", "/run", "/share/man" ],
+    "cleanup": [
+        "*.la",
+        "*.a",
+        "/lib/debug",
+        "/lib/pkgconfig",
+        "/run",
+        "/share/man"
+    ],
     "modules": [
         {
             "name": "pysocks",
@@ -22,7 +31,9 @@
             "build-commands": [
                 "python3 setup.py install --prefix /app"
             ],
-            "cleanup": [ "/lib" ],
+            "cleanup": [
+                "/lib"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -33,7 +44,9 @@
         {
             "name": "six",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -48,7 +61,9 @@
         {
             "name": "websocket-client",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -63,7 +78,9 @@
         {
             "name": "iso3166",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -78,7 +95,9 @@
         {
             "name": "pycryptodome",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -93,7 +112,9 @@
         {
             "name": "certifi",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -108,7 +129,9 @@
         {
             "name": "urllib3",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -124,7 +147,9 @@
         {
             "name": "idna",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -139,7 +164,9 @@
         {
             "name": "chardet",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -155,7 +182,9 @@
         {
             "name": "requests",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -170,7 +199,9 @@
         {
             "name": "iso639",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -185,7 +216,9 @@
         {
             "name": "streamlink",
             "no-autogen": true,
-            "ensure-writable": [ "/lib/python3.5/site-packages/easy-install.pth" ],
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
@@ -198,24 +231,24 @@
             ]
         },
         {
-        	"name": "waf",
-        	"no-autogen": true,
-        	"buildsystem": "simple",
+            "name": "waf",
+            "no-autogen": true,
+            "buildsystem": "simple",
             "build-commands": [
                 "python3 waf-light --make-waf",
                 "install waf /app/bin"
             ],
-        	"sources": [
-        		{
-        			"type": "git",
-        			"url": "https://github.com/waf-project/waf.git"
-        		}
-        	]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/waf-project/waf.git"
+                }
+            ]
         },
         {
             "name": "fribidi",
             "config-opts": [
-                    "--disable-docs"
+                "--disable-docs"
             ],
             "sources": [
                 {
@@ -225,20 +258,20 @@
             ]
         },
         {
-        	"name": "libass",
+            "name": "libass",
             "make-args": [
                 "-j4"
             ],
-        	"sources": [
-        		{
-        			"type": "git",
-        			"url": "https://github.com/libass/libass.git"
-        		}
-        	]
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/libass/libass.git"
+                }
+            ]
         },
         {
-        	"name": "ffmpeg",
-        	"no-autogen": true,
+            "name": "ffmpeg",
+            "no-autogen": true,
             "config-opts": [
                 "--disable-programs",
                 "--disable-doc",
@@ -247,13 +280,15 @@
             "make-args": [
                 "-j4"
             ],
-            "cleanup": [ "/share/ffmpeg" ],
-        	"sources": [
-        		{
-        			"type": "git",
-        			"url": "https://github.com/FFmpeg/FFmpeg.git"
-        		}
-        	]
+            "cleanup": [
+                "/share/ffmpeg"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/FFmpeg/FFmpeg.git"
+                }
+            ]
         },
         {
             "name": "zlib",
@@ -278,7 +313,10 @@
                 "waf install --destdir=/app -f",
                 "install /app/run/build/mpv/usr/local/bin/mpv /app/bin/mpv"
             ],
-            "cleanup": [ "/usr", "/etc"],
+            "cleanup": [
+                "/usr",
+                "/etc"
+            ],
             "sources": [
                 {
                     "type": "git",
@@ -294,7 +332,7 @@
                 "mkdir -p /app/share/java",
                 "tar xzvf jre.tar.gz --strip 1 -C /app/share/java"
             ],
-            "sources" : [
+            "sources": [
                 {
                     "type": "file",
                     "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=230532_2f38c3b165be4555a1fa6e98c45e0808",
@@ -306,6 +344,17 @@
         {
             "name": "chatty",
             "no-autogen": true,
+            "buildsystem": "simple",
+            "build-commands": [
+                "mkdir -p /app/bin/",
+                "install chatty.sh /app/bin/chatty",
+                "mkdir -p /app/share/chatty",
+                "unzip Chatty.zip -d /app/share/chatty/",
+                "mkdir -p /app/share/icons/hicolor/64x64/apps",
+                "install chatty.png /app/share/icons/hicolor/64x64/apps/chatty.png",
+                "mkdir -p /app/share/applications/",
+                "install chatty.desktop /app/share/applications/chatty.desktop"
+            ],
             "sources": [
                 {
                     "type": "file",
@@ -320,11 +369,6 @@
                 {
                     "type": "file",
                     "path": "chatty.png"
-                },
-                {
-                    "type": "file",
-                    "path": "chatty-Makefile",
-                    "dest-filename": "Makefile"
                 },
                 {
                     "type": "file",

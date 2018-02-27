@@ -5,9 +5,9 @@ pre-build:
 	flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
 build:
 	flatpak-builder --repo=repo chatty chatty.json
-	flatpak build-bundle repo Chatty_0.9.flatpak org.chatty.chatty
+	flatpak build-bundle repo Chatty.flatpak org.chatty.chatty
 install:
-	flatpak install --user --bundle Chatty_0.9.flatpak
+	flatpak install --user --bundle Chatty.flatpak
 uninstall:
 	flatpak uninstall --user org.chatty.chatty
 clean:

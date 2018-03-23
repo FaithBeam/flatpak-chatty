@@ -246,30 +246,6 @@
             ]
         },
         {
-            "name": "fribidi",
-            "config-opts": [
-                "--disable-docs"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/fribidi/fribidi.git"
-                }
-            ]
-        },
-        {
-            "name": "libass",
-            "make-args": [
-                "-j4"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/libass/libass.git"
-                }
-            ]
-        },
-        {
             "name": "ffmpeg",
             "no-autogen": true,
             "config-opts": [
@@ -308,7 +284,7 @@
             "no-autogen": true,
             "buildsystem": "simple",
             "build-commands": [
-                "waf configure --disable-manpage-build",
+                "waf configure --disable-manpage-build --disable-libass",
                 "waf -j4",
                 "waf install --destdir=/app -f",
                 "install /app/run/build/mpv/usr/local/bin/mpv /app/bin/mpv"
@@ -358,8 +334,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://github.com/chatty/chatty/releases/download/v0.9.1b1/Chatty_0.9.1b1.zip",
-                    "sha256": "38a8bfcfcadc553582d8d46a452149f664da2bbe9f386b2bb2f849708d285a1e",
+                    "path": "chatty.zip",
                     "dest-filename": "Chatty.zip"
                 },
                 {

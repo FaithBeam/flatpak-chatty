@@ -3,3 +3,4 @@ chatty/
 repo/
 .flatpak-builder/
 *.flatpak
+*.zip

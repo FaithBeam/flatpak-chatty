@@ -5,7 +5,7 @@ pre-build:
 	flatpak install flathub org.freedesktop.Platform//1.6 org.freedesktop.Sdk//1.6
 build:
 	curl -LJ -o chatty.zip `curl -s https://api.github.com/repos/chatty/chatty/releases/latest | grep browser_download_url | cut -d '"' -f 4 | head -n 1`
-	flatpak-builder --disable-rofiles-fuse --repo=repo chatty chatty.json
+	flatpak-builder --repo=repo chatty chatty.json
 	flatpak build-bundle repo Chatty.flatpak org.chatty.chatty
 install:
 	flatpak install --user --bundle Chatty.flatpak

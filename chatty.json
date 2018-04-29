@@ -311,8 +311,7 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=233162_512cd62ec5174c3487ac17c61aaa89e8",
-                    "sha256": "d489c36c2b1c056f399fcd3893ee5d80da873ab7d5c73980a7b6cd8b87a6f6ba",
+                    "path": "jre.tar.gz",
                     "dest-filename": "jre.tar.gz"
                 }
             ]
@@ -326,8 +325,8 @@
                 "install chatty.sh /app/bin/chatty",
                 "mkdir -p /app/share/chatty",
                 "unzip Chatty.zip -d /app/share/chatty/",
-                "mkdir -p /app/share/icons/hicolor/64x64/apps",
-                "install chatty.png /app/share/icons/hicolor/64x64/apps/chatty.png",
+                "mkdir -p /app/share/icons/hicolor/32x32/apps",
+                "install chatty.png /app/share/icons/hicolor/32x32/apps/chatty.png",
                 "mkdir -p /app/share/applications/",
                 "install chatty.desktop /app/share/applications/chatty.desktop"
             ],
@@ -343,7 +342,9 @@
                 },
                 {
                     "type": "file",
-                    "path": "chatty.png"
+                    "url": "http://chatty.github.io/icons2.png",
+                    "sha256": "4d85ec14c148dfa1feff93727910437af11fd4844ed126faae0f626cb6a738be",
+                    "dest-filename": "chatty.png"
                 },
                 {
                     "type": "file",

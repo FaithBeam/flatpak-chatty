@@ -27,12 +27,12 @@
         {
             "name": "pysocks",
             "no-autogen": true,
+            "ensure-writable": [
+                "/lib/python3.5/site-packages/easy-install.pth"
+            ],
             "buildsystem": "simple",
             "build-commands": [
                 "python3 setup.py install --prefix /app"
-            ],
-            "cleanup": [
-                "/lib"
             ],
             "sources": [
                 {
@@ -311,8 +311,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=230532_2f38c3b165be4555a1fa6e98c45e0808",
-                    "sha256": "f5013ffab71cfb690de18d2b75a2d8c95e87175c888c50042be06b167ea6b4b5",
+                    "url": "http://javadl.oracle.com/webapps/download/AutoDL?BundleId=233162_512cd62ec5174c3487ac17c61aaa89e8",
+                    "sha256": "d489c36c2b1c056f399fcd3893ee5d80da873ab7d5c73980a7b6cd8b87a6f6ba",
                     "dest-filename": "jre.tar.gz"
                 }
             ]
